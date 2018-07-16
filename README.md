@@ -9,7 +9,7 @@
 ##### Install (TODO: PyPy server location)
 
 ```bash
-git clone git@git.spxtranet.co.uk:DevOps/ecsopera.git
+git clone git@github.com:Pashbee/ecsopera.git 
 cd ecsopera/
 pip3 install .
 ```
@@ -19,7 +19,7 @@ pip3 install .
 To contribute we recommend installing in dev mode using:-
 
 ```bash
-git clone git@git.spxtranet.co.uk:DevOps/ecsopera.git
+git clone git@github.com:Pashbee/ecsopera.git 
 cd ecsopera/
 pip3 install -e .
 ```
