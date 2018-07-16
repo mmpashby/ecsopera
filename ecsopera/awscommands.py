@@ -7,7 +7,7 @@ from ecsopera.version import __version__
 
 
 def get_version(log):
-    """Get Scaleriff Version."""
+    """Get ECSOpera Version."""
     log.cmdname = 'version'
     log.display_banner()
     print("Version: {0}".format(__version__))

@@ -1,7 +1,7 @@
 _ecsopera_completion() {
     COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
                    COMP_CWORD=$COMP_CWORD \
-                   _SCALERIFF_COMPLETE=complete $1 ) )
+                   _ECSOPERA_COMPLETE=complete $1 ) )
     return 0
 }
 
