@@ -5,8 +5,8 @@ import logging
 import click
 from ecsopera.awscommands import (get_version,
                                    aws_ecs_ami_update,
-                                   aws_ecs_deploy,
-                                   aws_s3cp_cloudfront_deploy)
+                                   aws_ecs_deploy)
+                                   
 from ecsopera.loghelper import LogHelper
 
 
@@ -135,75 +135,10 @@ def aws_ecsdeploy(ecsoperaaccess,
                    timeout,
                    ecsoperaaccess['logger'])
 
-
-@click.command('aws-s3cpcloudfront-deploy',
-               short_help="Use this command to copy objects to an s3 bucket "
-                          "and perform cloudfront related ops.")
-@click.option('--source',
-              help="The source of files to copy. Can be another s3 bucket "
-                   "(affixed with s3:// (s3Uri format)) or absolute path.",
-              default=None,
-              type=str)
-@click.option('--destination',
-              help="The destination s3 bucket (affixed with s3:// "
-                   "(s3Uri format)) to cp files to.",
-              default=None,
-              type=str)
-@click.option('--expires',
-              help="The date and time the object is no longer cacheable "
-                   "but this is soon deprecated.",
-              default=None,
-              type=str)
-@click.option('--cflistdistid',
-              help="The cloudfront distribution list id to invalidate.",
-              default=None,
-              type=str)
-@click.option('--max-age',
-              help="Specifies the maximum amount of time the resources "
-                   "will be considered fresh. This will apply to all "
-                   "resources that are uploaded.",
-              default=0,
-              type=int)
-@click.option('--cleardst/--no-cleardst',
-              help="Specifies whether to clear the dst bucket",
-              default=False)
-@click.option('--invalcache/--no-invalcache',
-              help="Specifies whether to invalidate the cloudfront cache "
-                   "during this task.",
-              default=False)
-@click.option('--timeout',
-              help="Timeout value for checking for successful s3cp deploy. "
-                   "(default 5 mins).",
-              default=300,
-              type=int)
-@click.pass_obj
-def aws_s3cpcloudfront(ecsoperaaccess,
-                       source,
-                       destination,
-                       expires,
-                       cflistdistid,
-                       max_age,
-                       cleardst,
-                       invalcache,
-                       timeout):
-    aws_s3cp_cloudfront_deploy(ecsoperaaccess['accesskey'],
-                               ecsoperaaccess['secretkey'],
-                               source,
-                               destination,
-                               expires,
-                               cflistdistid,
-                               max_age,
-                               cleardst,
-                               invalcache,
-                               timeout,
-                               ecsoperaaccess['logger'])
-
-
 # Provider Commands
 ecsopera.add_command(version)
 ecsopera.add_command(aws_amiupdate)
 ecsopera.add_command(aws_ecsdeploy)
-ecsopera.add_command(aws_s3cpcloudfront)
 
 if __name__ == "__main__":
     ecsopera()

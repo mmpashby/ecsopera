@@ -2,7 +2,6 @@
 import sys
 from ecsopera.awsamiupdate import AWSECSAmiUpdate
 from ecsopera.awsecsdeploy import AWSECSDeploy
-from ecsopera.awss3cpdeploy import AWSS3CpDeploy
 from ecsopera.version import __version__
 
 
@@ -38,22 +37,3 @@ def aws_ecs_deploy(akey, skey, servicename, cluster,
                              dcount, min, max, timeout, log)
     ecsdeploy.task_deploy_init()
 
-
-def aws_s3cp_cloudfront_deploy(akey, skey, source, destination, expires,
-                               cflistdistid, maxage, cleardst, invalcache,
-                               timeout, log):
-    """AWS S3 Copy Command & Cloudfront post operations."""
-    log.cmdname = 'aws-s3cpcloudfront-deploy:'
-    log.display_banner()
-    if source is None:
-        log.error("You have not specified a source. You must supply a source "
-                  "local folder or s3-bucket.")
-        sys.exit(0)
-    if destination is None:
-        log.error("You have not specified a destination s3 bucket. You must "
-                  "specify a destination s3 bucket for copy operation.")
-
-    s3cpdeploy = AWSS3CpDeploy(akey, skey, source, destination, expires,
-                               cflistdistid, maxage, cleardst, invalcache,
-                               timeout, log)
-    s3cpdeploy.s3cp_deploy_init()
