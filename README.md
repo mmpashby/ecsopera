@@ -3,6 +3,12 @@
 
 #### AWS ECS Container Orchestration Tooling to update and resize container instances.
 
+##### Key Features
+- [x] Replace AMI images of underlying Container Instances with a horizontal scale out.
+- [x] Update the task definition version of a defined service.
+
+
+##### Requirements
 - Python3.x required
 - Recommend install in virtualenv (sudo not needed then)
 
