@@ -3,16 +3,16 @@
 
 #### AWS ECS Container Orchestration Tooling to update and resize container instances.
 
-##### Key Features
+__##### Key Features__
 - [x] Replace AMI images of underlying Container Instances with a horizontal scale out.
 - [x] Update the task definition version of a defined service.
 
 
-##### Requirements
+__##### Requirements__
 - Python3.x required
 - Recommend install in virtualenv (sudo not needed then)
 
-##### Install (TODO: PyPy server location)
+__##### Install (TODO: PyPy server location)__
 
 ```bash
 git clone git@github.com:Pashbee/ecsopera.git 
@@ -20,7 +20,7 @@ cd ecsopera/
 pip3 install .
 ```
 
-##### Dev Install
+__##### Dev Install__
 
 To contribute we recommend installing in dev mode using:-
 
@@ -34,7 +34,7 @@ To run unit tests:-
 
 ```pytest```
 
-##### Pre-req
+__##### Pre-req__
 
 To use for AWS ECS you will need the pragmatic keys provided by your account access.
 
@@ -48,7 +48,7 @@ export AWS_DEFAULT_REGION=eu-west-1
 
 ......or pass them as flags using ```--awsaccesskey ``` and ```--awssecretkey  ``` and ```---awsregion```
 
-##### Help
+__##### Help__
 
 To get help for any of the multi staged commands that ecsopera provides use the ```--help``` flag. eg:-
 
