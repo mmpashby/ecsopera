@@ -12,27 +12,19 @@
 - Python3.x required
 - Recommend install in virtualenv (sudo not needed then)
 
-##### Install (TODO: PyPy server location)
+##### Install
 
 ```bash
-git clone git@github.com:Pashbee/ecsopera.git 
-cd ecsopera/
-pip3 install .
-```
-
-##### Dev Install
-
-To contribute we recommend installing in dev mode using:-
-
-```bash
-git clone git@github.com:Pashbee/ecsopera.git 
-cd ecsopera/
-pip3 install -e .
+pip install ecsopera
 ```
 
 To run unit tests:-
 
-```pytest```
+```bash
+git clone git@github.com:Pashbee/ecsopera.git
+cd ecsopera/
+pip install -e . 
+pytest```
 
 ##### Pre-req
 
