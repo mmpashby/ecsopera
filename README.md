@@ -1,14 +1,7 @@
 ecsopera
 --------
-.. image:: https://travis-ci.org/Pashbee/ecsopera.svg?branch=master
-    :target: https://travis-ci.org/Pashbee/ecsopera
 
-.. image:: https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/coverage.png?b=master
-    :target: https://scrutinizer-ci.com/g/Pashbee/ecsopera
-
-.. image:: https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/quality-score.png?b=master
-    :target: https://scrutinizer-ci.com/g/Pashbee/ecsopera
-
+[![BuildStatus](https://travis-ci.org/Pashbee/ecsopera.svg?branch=master)](https://travis-ci.org/Pashbee/ecsopera) [![Coverage](https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Pashbee/ecsopera) [![CodeScore](https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Pashbee/ecsopera)
 `ecsopera` - AWS ECS Container Orchestration Tooling to update services and resize container instances.
 
 Key Features
