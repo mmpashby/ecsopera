@@ -24,7 +24,8 @@ To run unit tests:-
 git clone git@github.com:Pashbee/ecsopera.git
 cd ecsopera/
 pip install -e . 
-pytest```
+pytest
+```
 
 ##### Pre-req
 
