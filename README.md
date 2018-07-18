@@ -1,18 +1,29 @@
-# ecsopera
+ecsopera
+--------
+.. image:: https://travis-ci.org/Pashbee/ecsopera.svg?branch=master
+    :target: https://travis-ci.org/Pashbee/ecsopera
 
+.. image:: https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/coverage.png?b=master
+    :target: https://scrutinizer-ci.com/g/Pashbee/ecsopera
 
-#### AWS ECS Container Orchestration Tooling to update and resize container instances.
+.. image:: https://scrutinizer-ci.com/g/Pashbee/ecsopera/badges/quality-score.png?b=master
+    :target: https://scrutinizer-ci.com/g/Pashbee/ecsopera
 
-##### Key Features
+`ecsopera` - AWS ECS Container Orchestration Tooling to update services and resize container instances.
+
+Key Features
+------------
 - [x] Replace AMI images of underlying Container Instances with a horizontal scale out.
 - [x] Update the task definition version of a defined service.
 
 
-##### Requirements
+Requirements
+------------
 - Python3.x required
 - Recommend install in virtualenv (sudo not needed then)
 
-##### Install
+Install
+-------
 
 ```bash
 pip install ecsopera
@@ -27,7 +38,8 @@ pip install -e .
 pytest
 ```
 
-##### Pre-req
+Pre-req
+-------
 
 To use for AWS ECS you will need the pragmatic keys provided by your account access.
 
@@ -41,7 +53,8 @@ export AWS_DEFAULT_REGION=eu-west-1
 
 ......or pass them as flags using ```--awsaccesskey ``` and ```--awssecretkey  ``` and ```---awsregion```
 
-##### Help
+Help
+----
 
 To get help for any of the multi staged commands that ecsopera provides use the ```--help``` flag. eg:-
 
