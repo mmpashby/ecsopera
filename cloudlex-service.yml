@@ -1,0 +1,13 @@
+# cloudlex-service.yml
+version: "1"
+id: ecsopera
+name: Ecs Opera
+description: Tooling for missing functionality to update EC2 Classic ECS hosts.
+owner: mmpashby
+tier: low                  # critical | high | medium | low
+lifecycle: deprecated       # production | beta | experimental | deprecated
+links:
+tags:
+  - tooling
+  - devx
+dependencies: []
